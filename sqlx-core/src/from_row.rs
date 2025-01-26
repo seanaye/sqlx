@@ -234,6 +234,8 @@ use crate::{error::Error, row::Row};
 /// If your database supports a JSON type, you can leverage `#[sqlx(json)]`
 /// to automatically integrate JSON deserialization in your [`FromRow`] implementation using [`serde`](https://docs.rs/serde/latest/serde/).
 ///
+/// If you have an `Option`al field yuo can use `#[sqlx(json(nullable))]`.
+///
 /// ```rust,ignore
 /// #[derive(serde::Deserialize)]
 /// struct Data {
